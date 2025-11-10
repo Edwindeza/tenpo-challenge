@@ -1,9 +1,9 @@
-import type { Photo } from '../types/photo.types';
-import { SearchBar } from './SearchBar';
-import { VirtualizedList } from './VirtualizedList';
-import { PhotoListSkeleton } from './PhotoListSkeleton';
+import type { Photo } from '../../types/photo.types';
+import { SearchBar } from '../SearchBar';
+import { VirtualizedList } from '../VirtualizedList';
+import { PhotoListSkeleton } from '../PhotoListSkeleton';
 import { ErrorMessage } from '@/shared/components/ErrorMessage/ErrorMessage';
-import { usePhotoSearch } from '../hooks/usePhotoSearch';
+import { usePhotoSearch } from './usePhotoSearch';
 
 type PhotoListProps = {
   photos: Photo[];

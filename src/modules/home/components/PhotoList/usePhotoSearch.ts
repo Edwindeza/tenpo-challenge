@@ -1,5 +1,5 @@
 import { useState, useDeferredValue, useMemo } from 'react';
-import type { Photo } from '../types/photo.types';
+import type { Photo } from '../../types/photo.types';
 
 export const usePhotoSearch = (photos: Photo[]) => {
   const [searchTerm, setSearchTerm] = useState('');

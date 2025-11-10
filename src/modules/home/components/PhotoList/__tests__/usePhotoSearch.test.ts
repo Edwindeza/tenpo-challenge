@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import { usePhotoSearch } from '../usePhotoSearch';
-import type { Photo } from '../../types/photo.types';
+import type { Photo } from '../../../types/photo.types';
 
 const mockPhotos: Photo[] = [
   {

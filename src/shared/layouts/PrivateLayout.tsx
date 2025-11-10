@@ -12,6 +12,7 @@ type PrivateLayoutProps = {
 export const PrivateLayout = ({ children }: PrivateLayoutProps) => {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
   const logout = useAuthStore((state) => state.logout);
+  const user = useAuthStore((state) => state.user);
   const theme = useThemeStore((state) => state.theme);
   const navigate = useNavigate();
 
@@ -38,7 +39,13 @@ export const PrivateLayout = ({ children }: PrivateLayoutProps) => {
               Tenpo Challenge
             </h1>
             
-            <nav className="flex gap-2" aria-label="Acciones de usuario">
+            <div className="flex items-center gap-4">
+              {user?.email && (
+                <span className={`text-sm ${textClass} hidden sm:inline`}>
+                  {user.email}
+                </span>
+              )}
+              <nav className="flex gap-2" aria-label="Acciones de usuario">
               <Button
                 onClick={toggleTheme}
                 variant="primary"
@@ -58,6 +65,7 @@ export const PrivateLayout = ({ children }: PrivateLayoutProps) => {
                 Cerrar Sesión
               </Button>
             </nav>
+            </div>
           </div>
         </div>
       </header>
