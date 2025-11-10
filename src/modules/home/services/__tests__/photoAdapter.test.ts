@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { photoAdapter, photosAdapter } from '../photoAdapter';
 import type { PhotoApiResponse } from '../../types/photoApi.types';
-import type { Photo } from '../../types/photo.types';
 
 describe('photoAdapter', () => {
   const mockApiPhoto: PhotoApiResponse = {
